@@ -216,7 +216,7 @@ object SuiFacade extends semanticDashUiDashReactLibProps {
 
 @react object App {
 
-import SuiFacade._
+  import SuiFacade._
 
   type Props = Unit
 
@@ -242,7 +242,6 @@ import SuiFacade._
 
     val renderCard = section(
       // Header(HeaderProps())("Card"),
-      h2("Card"),
       Card(CardProps(color = SuiStrings.orange))("Card!")
     )
 
@@ -267,10 +266,9 @@ import SuiFacade._
       // renderIntro,
       div(
         renderCard,
-        // Gives element type 'undefined'
-        Input(InputProps())
-        // renderProgress
-        // renderButton
+        Input(InputProps()),
+        renderProgress,
+        // renderButton,
       )
     )
   }
